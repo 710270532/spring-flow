@@ -17,6 +17,16 @@
 
 ##	User Manual
 
+```java
+public static void main(String[] args) {
+    try {
+        FlowUtil.start("test.first", null);
+    } catch (FlowException e) {
+        e.printStackTrace();
+    }
+}
+```
+
 ##	About Us
 
 version 1.0.0, Any questions, please send mail to <zhanghongwei@le.com>.
