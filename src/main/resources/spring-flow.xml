@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd ">
+	
+    <!-- 扫包 -->
+    <!--<context:component-scan base-package="flow.handler"/>  -->
+    
+    <!-- 流程配置 
+	<bean name="test.aNode" class="flow.node.DefaultNode">
+	   <property name="handler" ref="aHandler" />
+	   <property name="next" ref="test.bNode" />
+	</bean>
+
+	<bean name="test.bNode" class="flow.node.DefaultNode">
+	    <property name="handler" ref="bHandler" />
+	    <property name="next" ref="test.cNode" />
+	</bean>
+	
+	<bean name="test.cNode" class="flow.node.DefaultNode">
+		<property name="handler" ref="cHandler" />
+	</bean>
+	-->
+	
+	<bean name="test.aHandler" class="flow.handler.AHandler" p:next-ref="test.bHandler"/>
+	
+	<bean name="test.bHandler" class="flow.handler.BHandler" p:next-ref="test.cHandler"/>
+	
+	<bean name="test.cHandler" class="flow.handler.CHandler"/>
+	
+	
+	
+
+</beans>
