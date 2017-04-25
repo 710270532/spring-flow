@@ -7,11 +7,13 @@
 
 ##	Install
 
-```<dependency>
-  <groupId>hongwei.zhang</groupId>
-  <artifactId>flow</artifactId>
-  <version>1.0.0</version>
-</dependency>```
+```xml
+<dependency>
+    <groupId>hongwei.zhang</groupId>
+    <artifactId>flow</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
 
 ##	User Manual
 
