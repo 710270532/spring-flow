@@ -17,6 +17,14 @@
 
 ##	User Manual
 
+####spring-flow.xml
+```xml
+<bean name="test.aHandler" class="flow.handler.AHandler" p:next-ref="test.bHandler"/>
+<bean name="test.bHandler" class="flow.handler.BHandler" p:next-ref="test.cHandler"/>
+<bean name="test.cHandler" class="flow.handler.CHandler"/>
+```
+
+####java api
 ```java
 public static void main(String[] args) {
     try {
